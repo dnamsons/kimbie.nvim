@@ -20,27 +20,27 @@ local function opt(key, default)
 end
 
 local g = {
-  transparent = 'onedark_transparent',
-  commentStyle = 'onedark_italic_comments',
-  keywordStyle = 'onedark_italic_keywords',
-  functionStyle = 'onedark_italic_functions',
-  variableStyle = 'onedark_italic_variables',
-  hideInactiveStatusline = 'onedark_hide_inactive_statusline',
-  sidebars = 'onedark_sidebars',
-  colors = 'onedark_colors',
-  dev = 'onedark_dev',
-  hideNonText = 'onedark_hide_nontext',
-  darkFloat = 'onedark_dark_float',
-  darkSidebar = 'onedark_dark_sidebar',
-  customTelescope = 'onedark_custom_telescope',
+  transparent = "kimbie_transparent",
+  commentStyle = "kimbie_italic_comments",
+  keywordStyle = "kimbie_italic_keywords",
+  functionStyle = "kimbie_italic_functions",
+  variableStyle = "kimbie_italic_variables",
+  hideInactiveStatusline = "kimbie_hide_inactive_statusline",
+  sidebars = "kimbie_sidebars",
+  colors = "kimbie_colors",
+  dev = "kimbie_dev",
+  hideNonText = "kimbie_hide_nontext",
+  darkFloat = "kimbie_dark_float",
+  darkSidebar = "kimbie_dark_sidebar",
+  customTelescope = "kimbie_custom_telescope",
 }
 
 config = {
   transparent = opt(g.transparent, false),
-  commentStyle = opt(g.commentStyle, true) and 'italic' or 'NONE',
-  keywordStyle = opt(g.keywordStyle, true) and 'italic' or 'NONE',
-  functionStyle = opt(g.functionStyle, false) and 'italic' or 'NONE',
-  variableStyle = opt(g.variableStyle, false) and 'italic' or 'NONE',
+  commentStyle = opt(g.commentStyle, true) and "italic" or "NONE",
+  keywordStyle = opt(g.keywordStyle, true) and "italic" or "NONE",
+  functionStyle = opt(g.functionStyle, false) and "italic" or "NONE",
+  variableStyle = opt(g.variableStyle, false) and "italic" or "NONE",
   hideInactiveStatusline = opt(g.hideInactiveStatusline, false),
   sidebars = opt(g.sidebars, {}),
   colors = opt(g.colors, {}),
@@ -59,7 +59,7 @@ local function applyConfiguration(userConfig)
       if config[key] ~= nil then
         config[key] = value
       else
-        error('monsonjeremy/onedark: Option ' .. key .. ' does not exist') -- luacheck: ignore
+        error("monsonjeremy/kimbie: Option " .. key .. " does not exist") -- luacheck: ignore
       end
     end
   end

@@ -1,15 +1,16 @@
-local util = require("onedark.util")
-local configModule = require("onedark.config")
+local util = require("kimbie.util")
+local configModule = require("kimbie.config")
 
 local M = {}
 
 function M.kitty(config)
   config = config or configModule.config
   config.transform_colors = true
-  local colors = require("onedark.colors").setup(config)
+  local colors = require("kimbie.colors").setup(config)
 
-  local kitty = util.template([[
-  # onedark colors for Kitty
+  local kitty = util.template(
+    [[
+  # kimbie colors for Kitty
 
   background ${bg}
   foreground ${fg}
@@ -48,7 +49,9 @@ function M.kitty(config)
   # extended colors
   color16 ${orange}
   color17 ${red1}
-  ]], colors)
+  ]],
+    colors
+  )
   return kitty
 end
 

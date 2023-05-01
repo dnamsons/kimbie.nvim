@@ -1,4 +1,4 @@
-# OneDark
+# Kimbie
 
 A dark Neovim theme written in Lua. Includes extra themes for Kitty and Alacritty
 

@@ -1,5 +1,5 @@
-local util = require('onedark.util')
-local configModule = require('onedark.config')
+local util = require("kimbie.util")
+local configModule = require("kimbie.config")
 
 local M = {}
 
@@ -11,36 +11,38 @@ function M.setup(config)
   -- Color Palette
   ---@class ColorScheme
   local colors = {
-    none = 'NONE',
-    bg = '#282c34',
-    bg2 = '#21252b',
-    bg_visual = '#393f4a',
-    darker_black = '#1b1f27',
-    black = '#1e222a', --  nvim bg
-    black2 = '#252931',
-    border = '#646e82',
-    fg = '#abb2bf',
-    fg_light = '#adbac7',
-    fg_dark = '#798294',
-    fg_gutter = '#5c6370',
-    dark5 = '#abb2bf',
-    blue = '#61afef',
-    cyan = '#56b6c2',
-    purple = '#c678dd',
-    orange = '#d19a66',
-    yellow = '#e5c07b',
-    yellow2 = '#e2c08d',
-    bg_yellow = '#ebd09c',
-    green = '#98c379',
-    red = '#e86671',
-    red1 = '#f65866',
-    git = { change = '#e0af68', add = '#109868', delete = '#9A353D', conflict = '#bb7a61' },
-    gitSigns = { change = '#e0af68', add = '#109868', delete = '#9A353D' },
+    none = "NONE",
+    bg = "#221a0f",
+    bg_statusline = "#274952",
+    bg2 = "#21252b",
+    bg_visual = "#393f4a",
+    darker_black = "#1b1f27",
+    black = "#1e222a", --  nvim bg
+    black2 = "#252931",
+    border = "#646e82",
+    fg = "#d3af86",
+    fg_light = "#adbac7",
+    fg_dark = "#798294",
+    fg_gutter = "#a57a4c",
+    dark5 = "#abb2bf",
+    blue = "#8ab1b0",
+    cyan = "#418292",
+    purple = "#98676a",
+    orange = "#f06431",
+    yellow = "#f79a32",
+    yellow2 = "#e2c08d",
+    bg_yellow = "#ebd09c",
+    green = "#889b4a",
+    red = "#dc3958",
+    poo = "#7e602c",
+    red1 = "#f65866",
+    git = { change = "#e0af68", add = "#109868", delete = "#9A353D", conflict = "#bb7a61" },
+    gitSigns = { change = "#e0af68", add = "#109868", delete = "#9A353D" },
     diagnostics = {
-      error = '#db4b4b',
-      hint = '#1abc9c',
-      info = '#0db9d7',
-      warn = '#e0af68',
+      error = "#db4b4b",
+      hint = "#1abc9c",
+      info = "#0db9d7",
+      warn = "#e0af68",
     },
   }
 
@@ -62,13 +64,12 @@ function M.setup(config)
   }
 
   colors.git.ignore = colors.fg_gutter
-  colors.black = util.darken(colors.bg, 0.8, '#000000')
+  colors.black = util.darken(colors.bg, 0.8, "#000000")
   colors.bg_highlight = colors.black
   colors.border_highlight = colors.blue
 
   -- Popups and statusline always get a dark background
   colors.bg_popup = colors.bg2
-  colors.bg_statusline = colors.bg2
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.darkSidebar and colors.bg2 or colors.bg

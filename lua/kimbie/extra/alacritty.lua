@@ -1,20 +1,23 @@
-local util = require("onedark.util")
-local configModule = require("onedark.config")
+local util = require("kimbie.util")
+local configModule = require("kimbie.config")
 
 local M = {}
 
 function M.alacritty(config)
   config = config or configModule.config
   config.transform_colors = true
-  local colors = require("onedark.colors").setup(config)
+  local colors = require("kimbie.colors").setup(config)
 
   local alacrittyColors = {}
   for k, v in pairs(colors) do
-    if type(v) == "string" then alacrittyColors[k] = v:gsub("^#", "0x") end
+    if type(v) == "string" then
+      alacrittyColors[k] = v:gsub("^#", "0x")
+    end
   end
 
-  local alacritty = util.template([[
-# onedark Alacritty Colors
+  local alacritty = util.template(
+    [[
+# kimbie Alacritty Colors
 colors:
   # Default colors
   primary:
@@ -52,7 +55,9 @@ colors:
     - { index: 16, color: '${orange}' }
     - { index: 17, color: '${red1}' }
 
-  ]], alacrittyColors)
+  ]],
+    alacrittyColors
+  )
 
   return alacritty
 end

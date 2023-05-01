@@ -1,7 +1,7 @@
 .DEFAULT_GOAL = check
 
-onedark_path = lua/onedark
-extra_path = $(onedark_path)/extra
+kimbie_path = lua/kimbie
+extra_path = $(kimbie_path)/extra
 
 extra: $(extra_path)
 	@lua $(extra_path)/init.lua
@@ -9,7 +9,7 @@ extra: $(extra_path)
 format:
 	@for file in `find . -name '*.lua'`;do lua-format $$file -i; done;
 
-lint: $(onedark_path)
-	@luacheck $(onedark_path)
+lint: $(kimbie_path)
+	@luacheck $(kimbie_path)
 
 check: format lint
