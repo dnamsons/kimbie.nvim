@@ -24,7 +24,7 @@ function M.setup(config)
     fg_light = "#adbac7",
     fg_dark = "#798294",
     fg_gutter = "#a57a4c",
-    dark5 = "#abb2bf",
+    dark5 = "#c2a383",
     blue = "#8ab1b0",
     cyan = "#418292",
     purple = "#98676a",
