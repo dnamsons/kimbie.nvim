@@ -45,15 +45,15 @@ Install the theme with your preferred package manager:
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'monsonjeremy/onedark.nvim'
+Plug 'dnamsons/kimbie.nvim'
 ```
 
 [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use({ 'monsonjeremy/onedark.nvim' })
+use({ 'dnamsons/kimbie.nvim' })
 -- use this branch for new treesitter highlights 
-use({ 'monsonjeremy/onedark.nvim', branch = 'treesitter' })
+use({ 'dnamsons/kimbie.nvim', branch = 'treesitter' })
 ```
 
 ## 🚀 Usage
@@ -102,7 +102,6 @@ let g:lightline = {'colorscheme': 'onedark'}
 | hideInactiveStatusline | `false`  | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
 | sidebars               | `{}`     | Set a darker background on sidebar-like windows. For example: `{"qf", "vista_kind", "terminal", "packer"}`                                                      |
 | darkSidebar            | `true`   | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
-| darkFloat              | `true`   | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 | colors                 | `{}`     | You can override specific color groups to use other groups or a hex color                                                                                       |
 | customTelescope        | `false`  | Better telescope colors                                                                                                                                         |
 
@@ -146,8 +145,3 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 <img width="825" alt="Screen Shot 2021-05-23 at 2 49 57 PM" src="https://user-images.githubusercontent.com/8846086/119279221-23f08b00-bbdf-11eb-885e-c2c238aa1c04.png">
 
-## Support
-
-<a href="https://www.buymeacoffee.com/monsonjeremy" target="_blank">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
-</a>

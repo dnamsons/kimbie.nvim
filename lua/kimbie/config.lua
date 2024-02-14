@@ -30,7 +30,6 @@ local g = {
   colors = "kimbie_colors",
   dev = "kimbie_dev",
   hideNonText = "kimbie_hide_nontext",
-  darkFloat = "kimbie_dark_float",
   darkSidebar = "kimbie_dark_sidebar",
   customTelescope = "kimbie_custom_telescope",
 }
@@ -46,7 +45,6 @@ config = {
   colors = opt(g.colors, {}),
   dev = opt(g.dev, false),
   hideNonText = opt(g.hideNonText, true),
-  darkFloat = opt(g.darkFloat, true),
   darkSidebar = opt(g.darkSidebar, true),
   customTelescope = opt(g.customTelescope, false),
   transform_colors = false,
@@ -59,7 +57,7 @@ local function applyConfiguration(userConfig)
       if config[key] ~= nil then
         config[key] = value
       else
-        error("monsonjeremy/kimbie: Option " .. key .. " does not exist") -- luacheck: ignore
+        error("dnamsons/kimbie: Option " .. key .. " does not exist") -- luacheck: ignore
       end
     end
   end

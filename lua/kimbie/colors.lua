@@ -74,7 +74,7 @@ function M.setup(config)
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.darkSidebar and colors.bg2 or colors.bg
   colors.bg_sidebar = config.transparent and colors.none or colors.bg_sidebar
-  colors.bg_float = config.darkFloat and colors.bg2 or colors.bg
+  colors.bg_float = colors.bg
 
   colors.bg_search = colors.bg_yellow
   colors.fg_search = colors.bg2
