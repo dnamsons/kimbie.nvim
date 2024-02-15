@@ -14,7 +14,7 @@ function M.setup(config)
     none = "NONE",
     bg = "#221a0f",
     bg_statusline = "#274952",
-    bg2 = "#21252b",
+    bg2 = "#362815",
     bg_visual = "#393f4a",
     darker_black = "#1b1f27",
     black = "#1e222a", --  nvim bg
