@@ -99,6 +99,7 @@ function M.setup(config)
     Operator = { fg = c.fg },                                 -- "sizeof", "+", "*", etc.
     Keyword = { fg = c.purple, style = config.keywordStyle }, --  any other keyword
     ["@symbol"] = { fg = c.yellow },
+    ["@string.special.symbol"] = { fg = c.yellow },
     ["@constant.builtin"] = { fg = c.yellow },
     ["@variable.builtin"] = { fg = c.purple },
     ["@tag.attribute"] = { fg = c.yellow },
