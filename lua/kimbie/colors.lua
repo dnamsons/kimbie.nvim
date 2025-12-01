@@ -22,7 +22,7 @@ function M.setup(config)
     border = "#646e82",
     fg = "#d3af86",
     fg_light = "#c2a383",
-    fg_dark = "#798294",
+    fg_dark = "#c2a383",
     fg_gutter = "#a57a4c",
     dark5 = "#c2a383",
     blue = "#8ab1b0",
